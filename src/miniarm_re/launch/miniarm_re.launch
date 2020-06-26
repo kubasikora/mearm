@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- base servo real effector -->
+    <node ns="miniarm_re" name="base" pkg="servo_controller" type="servo_controller_node">
+        <param name="name" type="string" value="base"/>
+    </node>
+
+    <!-- left servo real effector -->
+    <node ns="miniarm_re" name="left" pkg="servo_controller" type="servo_controller_node">
+        <param name="name" type="string" value="left"/>
+    </node>
+
+    <!-- right servo real effector -->
+    <node ns="miniarm_re" name="right" pkg="servo_controller" type="servo_controller_node">
+        <param name="name" type="string" value="right"/>
+    </node>
+
+    <!-- gripper servo real effector -->
+    <node ns="miniarm_re" name="gripper" pkg="servo_controller" type="servo_controller_node">
+        <param name="name" type="string" value="gripper"/>
+    </node>
+</launch>

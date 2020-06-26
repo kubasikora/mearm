@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- miniarm core agent -->
+    <node name="miniarm_core" pkg="miniarm_core" type="miniarm_core_node"/>
+</launch>

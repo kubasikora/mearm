@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <group>
+        <!-- launch core -->
+        <include file="$(find miniarm_core)/launch/miniarm_core.launch" />
+    </group>
+
+    <group>
+        <!-- launch real effector -->
+        <include file="$(find miniarm_re)/launch/miniarm_re.launch" />
+    </group>
+</launch>
