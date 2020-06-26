@@ -1,14 +1,14 @@
 #include<ros/ros.h>
 #include<ros/time.h>
-#include<miniarm_core/miniarm_core.hxx>
+#include<mearm_core/mearm_core.hxx>
 
 #include<iostream>
 
 int main(int argc, char **argv) {
-  ros::init(argc, argv, "miniarm_core");
+  ros::init(argc, argv, "mearm_core");
   ros::NodeHandle nh("~");
   
-  MiniarmCore node(nh);
+  mearmCore node(nh);
   ros::spin();
 
   return 0;

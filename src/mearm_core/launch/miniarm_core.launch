@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- mearm core agent -->
+    <node name="mearm_core" pkg="mearm_core" type="mearm_core_node"/>
+</launch>

@@ -1,19 +1,19 @@
-#include<miniarm_core/miniarm_core.hxx>
+#include<mearm_core/mearm_core.hxx>
 #include<servo_controller/ServoControl.h>
 
 #include<random>
 #include<thread>
 
-MiniarmCore::MiniarmCore(ros::NodeHandle nh){
-    basePub_ = nh.advertise<servo_controller::ServoControl>("/miniarm_re/base/servo_controller", 30);
-    leftPub_ = nh.advertise<servo_controller::ServoControl>("/miniarm_re/left/servo_controller", 30);
-    rightPub_ = nh.advertise<servo_controller::ServoControl>("/miniarm_re/right/servo_controller", 30);
-    gripperPub_ = nh.advertise<servo_controller::ServoControl>("/miniarm_re/gripper/servo_controller", 30);
+mearmCore::mearmCore(ros::NodeHandle nh){
+    basePub_ = nh.advertise<servo_controller::ServoControl>("/mearm_re/base/servo_controller", 30);
+    leftPub_ = nh.advertise<servo_controller::ServoControl>("/mearm_re/left/servo_controller", 30);
+    rightPub_ = nh.advertise<servo_controller::ServoControl>("/mearm_re/right/servo_controller", 30);
+    gripperPub_ = nh.advertise<servo_controller::ServoControl>("/mearm_re/gripper/servo_controller", 30);
 
-    coreThread_ = std::thread{&MiniarmCore::coreLoop, this};
+    coreThread_ = std::thread{&mearmCore::coreLoop, this};
 }
 
-void MiniarmCore::coreLoop() {
+void mearmCore::coreLoop() {
     std::uniform_real_distribution<double> unif(-1, 1);
     std::default_random_engine re;
     

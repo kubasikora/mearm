@@ -1,14 +1,14 @@
-#ifndef __MINIARM_CORE_CONTROLLER__
-#define __MINIARM_CORE_CONTROLLER__
+#ifndef __mearm_CORE_CONTROLLER__
+#define __mearm_CORE_CONTROLLER__
 
 #include<ros/ros.h>
 #include<ros/time.h>
 
 #include<thread>
 
-class MiniarmCore {
+class mearmCore {
   public:
-    MiniarmCore(ros::NodeHandle nh);
+    mearmCore(ros::NodeHandle nh);
 
   private:
     void coreLoop();

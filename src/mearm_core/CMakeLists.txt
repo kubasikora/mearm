@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(miniarm_core)
+project(mearm_core)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -103,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  INCLUDE_DIRS include
- LIBRARIES miniarm_core
+ LIBRARIES mearm_core
  CATKIN_DEPENDS roscpp servo_controller
 )
 
@@ -120,7 +120,7 @@ include_directories(
 
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
-  src/${PROJECT_NAME}/miniarm_core.cxx
+  src/${PROJECT_NAME}/mearm_core.cxx
 )
 
 ## Add cmake target dependencies of the library
@@ -132,7 +132,7 @@ add_library(${PROJECT_NAME}
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME}_node 
-    src/miniarm_core_node.cxx
+    src/mearm_core_node.cxx
 )
 
 ## Rename C++ executable without prefix
@@ -148,7 +148,7 @@ add_executable(${PROJECT_NAME}_node
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
-  miniarm_core
+  mearm_core
 )
 
 #############
@@ -198,7 +198,7 @@ target_link_libraries(${PROJECT_NAME}_node
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_miniarm_core.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_mearm_core.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

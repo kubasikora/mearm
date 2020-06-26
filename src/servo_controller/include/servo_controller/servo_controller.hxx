@@ -1,5 +1,5 @@
-#ifndef __MINIARM_SERVO_CONTROLLER__
-#define __MINIARM_SERVO_CONTROLLER__
+#ifndef __mearm_SERVO_CONTROLLER__
+#define __mearm_SERVO_CONTROLLER__
 
 #include<ros/ros.h>
 #include<ros/time.h>
