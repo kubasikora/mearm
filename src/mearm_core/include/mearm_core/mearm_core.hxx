@@ -3,6 +3,7 @@
 
 #include<ros/ros.h>
 #include<ros/time.h>
+#include<mearm_core/ik.hxx>
 
 #include<thread>
 
@@ -15,6 +16,7 @@ class mearmCore {
     
     ros::Publisher basePub_, leftPub_, rightPub_, gripperPub_;
     std::thread coreThread_;
+    InverseKinematicSolver ikSolver_;
 };
 
 #endif

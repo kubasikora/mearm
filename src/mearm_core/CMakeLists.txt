@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
  INCLUDE_DIRS include
  LIBRARIES mearm_core
- CATKIN_DEPENDS roscpp servo_controller
+ CATKIN_DEPENDS roscpp servo_controller geometry_msgs
 )
 
 ###########
